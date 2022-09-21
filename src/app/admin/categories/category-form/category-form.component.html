@@ -1,0 +1,14 @@
+<h5>
+    {{editing ? "Edit ":"Create " }}Category
+</h5>
+
+<form #form="ngForm" (ngSubmit)="save(form)">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" name="name" [(ngModel)]="category.name">
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">  
+        {{editing ? "Edit ":"Create" }} category
+     </button>
+    <button class="btn btn-warning ml-3" style="margin-top: 10px;" routerLink="/admin/main/categories">Canel</button>
+</form>
